@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #f7efe8;
+  --foreground: #24191a;
+  --card: rgba(255, 253, 250, 0.96);
+  --card-border: rgba(91, 45, 47, 0.12);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, rgba(245, 230, 224, 0.95), transparent 26%),
+    radial-gradient(circle at top right, rgba(197, 155, 109, 0.15), transparent 18%),
+    linear-gradient(180deg, #fffaf7 0%, #f7efe8 44%, #f3e7dd 100%);
+  color: var(--foreground);
+  font-family: var(--font-body), sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: rgba(179, 92, 75, 0.18);
+}
+
+.section-shell {
+  @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+}
+
+.glass-panel {
+  @apply rounded-[2rem] border border-[color:var(--card-border)] bg-[color:var(--card)] shadow-soft backdrop-blur-sm;
+}
+
+.eyebrow {
+  @apply text-[0.7rem] font-extrabold uppercase tracking-[0.34em] text-rose;
+}
+
+.section-title {
+  @apply font-display text-3xl font-semibold leading-[1.02] text-berry sm:text-4xl lg:text-5xl;
+}
+
+.section-copy {
+  @apply max-w-2xl text-[1.02rem] leading-8 text-berry/85;
+}
+
+.button-primary {
+  @apply inline-flex items-center justify-center rounded-full bg-berry px-6 py-3.5 text-sm font-bold text-white transition hover:bg-[#4a2023];
+}
+
+.button-secondary {
+  @apply inline-flex items-center justify-center rounded-full border border-berry/15 bg-white px-6 py-3.5 text-sm font-bold text-berry transition hover:border-berry/30 hover:bg-blush/45;
+}
+
+.slider-control {
+  @apply rounded-full border border-white/80 bg-white/95 p-3 text-berry shadow-[0_18px_40px_rgba(36,25,26,0.22)] backdrop-blur transition hover:-translate-y-0.5 hover:bg-[#f4e3cf];
+}
+
+.input-field {
+  @apply w-full rounded-2xl border border-berry/10 bg-white px-4 py-3 text-sm text-berry outline-none transition placeholder:text-berry/45 focus:border-rose focus:ring-2 focus:ring-rose/15;
+}
+
+.prose-card p {
+  @apply text-sm leading-7 text-berry/80;
+}
+
+.highlight-mark {
+  @apply rounded-full border border-gold/30 bg-blush px-3 py-1 text-berry;
+}
+
+.hero-highlight {
+  @apply text-gold drop-shadow-[0_1px_0_rgba(91,45,47,0.08)];
+}
